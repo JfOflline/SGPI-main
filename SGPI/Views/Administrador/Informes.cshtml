@@ -1,0 +1,117 @@
+﻿
+@{
+    ViewData["Title"] = "Informes";
+}
+
+<div class="row">
+    <h1 style="margin-top: 5%">Reportes</h1>
+</div>
+<br />
+<hr />
+
+<ul class="navbar navbar-expand-sm bg-dark navbar-dard sticky-top">
+
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" href="https://localhost:5001/Administrador/CrearUsuario?">Crear usuario</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" href="BuscarUsuario">Buscar Usuario</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" href="informes">Reportes</a>
+    </li>
+
+</ul>
+
+<div class="row">
+
+    <form class="form-inline" style="justify-content:left">
+        <input class="form-control" type="search" placeholder="Documento" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+    <form>
+        <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 200px">
+            <option value="#">Programa</option>
+            <option value="r">Administrador</option>
+            <option value="a">Coordinador</option>
+            <option value="v">Estudiante</option>
+        </select>
+    </form>
+
+ 
+
+</div>
+
+
+<div class="row" style="margin-top: 100px">
+
+
+    <table class="table table-responsive" style="margin-left: 210px; border-color:black;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Tipo Documento</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-danger" value="Reportar">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-danger" value="Reportar">
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <input type="submit" class="btn btn-danger" value="Reportar">
+                </td>
+            </tr>
+        </tbody>
+        <tr>
+            <th scope="row">4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <input type="submit" class="btn btn-danger" value="Reportar">
+            </td>
+        </tr>
+    </table>
+    <form>
+        <button type="submit" class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Login" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Cerrar sesión </button>
+    </form>
+        
+</div>

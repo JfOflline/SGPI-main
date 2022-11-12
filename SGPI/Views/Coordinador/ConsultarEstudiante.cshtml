@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SGPI.Models.Usuario>
+@{
+    ViewData["Title"] = "ConsultarEstudiante";
+    int cont = 0;
+}
+
+<div class="row">
+    <h1 style="margin-top: 5%">Consultar Estudiante</h1>
+    <img src="~/img/tdea.png" style="margin-left:630px; width:100px; margin-top:20px" />
+</div>
+<br />
+<hr />
+
+<div class="row">
+    <form method="post" class="form-inline" style="justify-content:left">
+        <input class="form-control" type="search" placeholder="Documento" aria-label="Search" style="margin-left:65px" name="documento">
+        <input class="btn btn-outline-secondary" type="submit" value="Buscar" style="margin-right:230px">
+        @Html.DropDownList("IdPrograma", new SelectList(ViewBag.programas, "IdPrograma", "ValPrograma"), "Programa",new { @class = "btn btn-outline-secondary dropdown-toggle" })
+    </form>
+    <form>
+        <button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="MenuCoordinador" style="margin-left: 300px;">Volver</button>
+    </form>
+</div>
+<div class="row" style="margin-top: 100px">
+    <table class="table table-responsive" style="margin-left: 20px; border-color:black;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Programa</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Valor pagado</th>
+                <th scope="col">Fecha pago</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Opcion</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var i in Model)
+            {
+
+                <tr>
+                    <th scope="row">@Html.DisplayFor(modelItem => i.IdUsuario)</th>
+                    <td>@Html.DisplayFor(modelItem => i.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => i.Documento)</td>
+                    <td>@Html.ViewBag.programa[cont]</td>
+                    <td>@Html.DisplayFor(modelItem => i.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => i.Telefono)</td>
+                    <td>$$$$</td>
+                    <td>STD</td>
+                    <td>STD</td>
+                    <td>
+                        <a href='@Url.Action("", "Coordinador", new { id = i.IdUsuario })'>
+                            <img src="~/img/ojo.png" width="25" height="25" />
+                        </a>
+                    </td>
+                </tr>
+                cont++;
+
+            }
+        </tbody>
+    </table>
+</div>
+

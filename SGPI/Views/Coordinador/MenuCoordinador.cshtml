@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "MenuCoordinador";
+}
+
+<div style="position:absolute; top:10%;left:20%">
+    <h1>MENÚ COORDINADOR</h1>
+    <br />
+    <hr style="border-color:black" />
+    <form>
+        <div class="row">
+            <div class="btn-group-vertical" style="width:400px; height:100px; margin-top:200px;" role="group" aria-label="Basic example">
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="ConsultarEstudiante"><b>CONSULTAR ESTUDIANTE</b></button>
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="ProgramarAsignatura"><b>PROGRAMAR ASIGNATURA</b></button>
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="Homologar"><b>HOMOLOGAR</b></button>
+                <!--button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="EntrevistaAdmicion"><b>ENTREVISTA/ADMISION</b></!--button-->
+                <button type="submit" class="btn btn-outline-dark" asp-area="" asp-controller="Login" asp-action="Login"><b>CERRAR SESION</b></button>
+            </div>
+            <div style="margin-top:85px; margin-left:100px">
+                <img src="~/img/tdea.png" style="width:300px">
+            </div>
+        </div>
+    </form>
+</div>
+

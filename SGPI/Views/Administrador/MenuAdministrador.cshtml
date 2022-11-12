@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "MenuAdministrador";
+}
+
+<div style="position:absolute; top:10%;left:20%">
+    <h1>MENÚ ADMINISTRADOR</h1>
+    <br />
+    <hr style="border-color:black" />
+    <form>
+        <div class="row">
+            <div class="btn-group-vertical" style="width:400px; height:100px; margin-top:200px;" role="group" aria-label="Basic example">
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Administrador" asp-action="CrearUsuario"><b>CREAR USUARIO</b></button>
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Administrador" asp-action="BuscarUsuario"><b>BUSCAR USUARIO</b></button>
+                <button type="submit" class="btn btn-outline-dark" asp-controller="Administrador" asp-action="Informes"><b>INFORMES</b></button>
+                <button type="submit" class="btn btn-outline-dark" asp-area="" asp-controller="Login" asp-action="Login"><b>CERRAR SECCION</b></button>
+            </div>
+            <div style="margin-top:85px; margin-left:100px">
+                <img src="~/img/tdea.png" style="width:300px">
+            </div>
+        </div>
+    </form>
+</div>

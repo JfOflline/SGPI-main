@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div style="position:absolute; top:10%;left:20%">
+    <h1>SISTEMA DE GESTIÓN DE POSGRADOS</h1>
+    <br />
+    <hr style="border-color:black"/>
+    <form method="post">
+        <div class="row">
+            <div style="margin-left:170px;">
+                <div class="form-group" style="margin-top: 70px; margin-bottom: 45px;">
+                    <label for="usuario" style="font-size:20px"><b>Usuario</b></label>
+                    <input type="text" class="form-control" style="border-color:black; border-width:2px; width:400px" id="usuario" aria-describedby="" placeholder="Ingrese su documento" name="documento">
+                </div>
+                <div class="form-group">
+                    <label for="contracena" style="font-size:20px"><b>Contraceña</b></label>
+                    <input type="password" class="form-control" style="border-color:black; border-width:2px; width:400px" id="contracena" placeholder="Ingrese su contraseña" name="contracena">
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 35px; margin-bottom: 30px;margin-left:150px">Ingresar</button>
+                <br />
+                <a href="" style="margin-left:120px">@Html.ActionLink("¿Olvido la contraceña?", "OlvidoContracena", "Login")</a>
+            </div>
+    
+        </div>
+    </form>
+</div>

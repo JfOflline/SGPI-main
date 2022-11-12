@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewData["Title"] = "Homologar";
+}
+
+<div class="row">
+    <h1 style="margin-top: 5%">Homologar</h1>
+    <img src="~/img/tdea.png" style="margin-left:800px; width:100px; margin-top:20px" />
+</div>
+<br />
+<hr />
+
+<div class="row">
+
+    <form class="form-inline" style="justify-content:left">
+        <input class="form-control" type="search" placeholder="Documento" aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+    <form>
+        <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 70px">
+            <option value="#">Programa</option>
+            <option value="r">ESP.TI</option>
+            <option value="a">MG.TI</option>
+            <option value="v">MGRMA</option>
+        </select>
+    </form>
+
+    <form>
+        <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 70px">
+            <option value="#">Programa</option>
+            <option value="r">ESP.TI</option>
+            <option value="a">MG.TI</option>
+            <option value="v">MGRMA</option>
+        </select>
+    </form>
+
+    <form style="margin-left:70px">
+        <label for="start">Periodo ac</label>
+        <input type="date" id="start" name="trip-start"
+               value="2018-07-22"
+               min="2018-01-01" max="2018-12-31">
+    </form>
+
+    <form>
+        <button type="submit" class="btn btn-outline-dark" asp-controller="Coordinador" asp-action="MenuCoordinador" style="margin-left: 70px;">Volver</button>
+    </form>
+
+</div>
+
+<form class="row" style="margin-top:50px;margin-left:100px">
+    <div class="form-group" style="margin-left:90px">
+        <label for="start">fecha elaboracion</label>
+        <input type="date" id="start" name="trip-start"
+               value="2018-07-22"
+               min="2018-01-01" max="2018-12-31">
+    </div>
+    <div class="form-group" style="margin-left:70px">
+        <label for="nombre" style=""><b>Nombre</b></label>
+        <input type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="nombre" placeholder="Ej. Juan">
+    </div>
+    <div class="form-group" style="margin-left:70px">
+        <label for="documento" style=""><b>Documento</b></label>
+        <input type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="documento" placeholder="Ej. Perez">
+    </div>
+</form>
+
+
+
+<div class="row" style="margin-top: 50px">
+
+
+    <table class="table table-responsive" style="border-color:black;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Codigo asignatura</th>
+                <th scope="col">Nombre asignatura</th>
+                <th scope="col">credito</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Universidad</th>
+                <th scope="col">Nombre asignatura homologada</th>
+                <th scope="col">Codigo asignatura homologada</th>
+                <th scope="col">Credito homologada</th>
+                <th scope="col">Nota definitiva</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>as14587fs1w</td>
+                <td>Logica</td>
+                <td>4</td>
+                <td>3</td>
+                <td>ESp</td>
+                <td>tdea</td>
+                <td>
+                    <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 150px">
+                        <option value="#">Programa</option>
+                        <option value="r">ESP.TI</option>
+                        <option value="a">MG.TI</option>
+                        <option value="v">MGRMA</option>
+                    </select>
+                </td>
+                <td>dgf15748fg</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>as14587fs1w</td>
+                <td>Logica</td>
+                <td>4</td>
+                <td>3</td>
+                <td>ESp</td>
+                <td>tdea</td>
+                <td>
+                    <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 150px">
+                        <option value="#">Programa</option>
+                        <option value="r">ESP.TI</option>
+                        <option value="a">MG.TI</option>
+                        <option value="v">MGRMA</option>
+                    </select>
+                </td>
+                <td>dgf15748fg</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>as14587fs1w</td>
+                <td>Logica</td>
+                <td>4</td>
+                <td>3</td>
+                <td>ESp</td>
+                <td>tdea</td>
+                <td>
+                    <select name="color" id="color" class="btn btn-outline-darck" style="border:solid 1px; margin-left: 150px">
+                        <option value="#">Programa</option>
+                        <option value="r">ESP.TI</option>
+                        <option value="a">MG.TI</option>
+                        <option value="v">MGRMA</option>
+                    </select>
+                </td>
+                <td>dgf15748fg</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+    </table>
+</div>
+

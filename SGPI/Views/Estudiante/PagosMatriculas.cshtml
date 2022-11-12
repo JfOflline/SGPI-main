@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "PagosMatriculas";
+}
+
+<div class="row">
+    <h1 style="margin-top: 5%">Pagos matricula</h1>
+    <img src="~/img/tdea.png" style="margin-left:700px; width:100px; margin-top:20px" />
+</div>
+<br />
+<hr />
+
+<div class="row">
+
+    <form>
+        <button type="submit" class="btn btn-outline-dark" asp-controller="Estudiante" asp-action="MenuEstudiante">Volver</button>
+    </form>
+
+</div>
+
+<form class="row" style="margin-top:50px;margin-left:300px">
+    <div>
+        <button type="submit" class="btn btn-outline-dark" style="margin-left: 150px;">Añadir</button>
+        <button type="submit" class="btn btn-outline-dark" style="margin-left: 100px;">Guardar</button>
+    </div>
+</form>
+
+
+
+<div class="row" style="margin-top: 50px">
+
+
+    <table class="table table-responsive" style="margin-left: 300px; border-color:black;">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Valor pagado</th>
+                <th scope="col">Fecha pago</th>
+                <th scope="col">Comprobante de pago</th>
+                <th scope="col">Ver</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><input type="text" style="width:100px" /></td>
+                <td>
+                    <input type="date" id="start" name="trip-start"
+                           value="2022-01-01"
+                           min="2022-01-01" max="2023-12-31">
+                </td>
+                <td>
+                    <input type="text" style="width:100px" />
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td><input type="text" style="width:100px" /></td>
+                <td>
+                    <input type="date" id="start" name="trip-start"
+                           value="2022-01-01"
+                           min="2022-01-01" max="2023-12-31">
+                </td>
+                <td>
+                    <input type="text" style="width:100px" />
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td><input type="text" style="width:100px" /></td>
+                <td>
+                    <input type="date" id="start" name="trip-start"
+                           value="2022-01-01"
+                           min="2022-01-01" max="2023-12-31">
+                </td>
+                <td>
+                    <input type="text" style="width:100px" />
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                </td>
+            </tr>
+</table>
+</div>
+

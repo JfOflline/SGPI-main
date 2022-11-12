@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "OlvidoContracena";
+}
+
+<div style="position:absolute; top:10%;left:20%">
+    <h1>OLVIDO SU CONTRACEÑA</h1>
+    <br />
+    <hr style="border-color:black" />
+    <form style="border-block-width: 3px; border-block-color:black">
+        <div class="row">
+            <div style="margin-left:30px;">
+                <div class="form-group" style="margin-top: 85px; margin-bottom: 45px;">
+                    <label for="documento" style="font-size:20px"><b>Documento</b></label>
+                    <input type="text" class="form-control" style="border-color:black; border-width:2px; width:400px" id="documento" aria-describedby="" placeholder="Ej. 15389689">
+                </div>
+                <div class="form-group">
+                    <label for="email" style="font-size:20px"><b>Correo</b></label>
+                    <input type="email" class="form-control" style="border-color:black; border-width:2px; width:400px" id="email" placeholder="Ej. freffs@sdsdfds.com">
+                </div>
+                <button type="submit" class="btn btn-outline-dark" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Enviar</button>
+                <button type="submit" class="btn btn-outline-dark" asp-area="" asp-controller="Login" asp-action="Login" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Cancelar</button>
+            </div>
+            <div style="margin-top:85px; margin-left:100px">
+                <img src="~/img/tdea.png" style="width:300px">
+            </div>
+        </div>
+    </form>
+</div>
+
