@@ -3,29 +3,24 @@
     ViewData["Title"] = "PagosMatriculas";
 }
 
-<div class="row">
-    <h1 style="margin-top: 5%">Pagos matricula</h1>
-    <img src="~/img/tdea.png" style="margin-left:700px; width:100px; margin-top:20px" />
-</div>
-<br />
-<hr />
 
 <div class="row">
-
-    <form>
-        <button type="submit" class="btn btn-outline-dark" asp-controller="Estudiante" asp-action="MenuEstudiante">Volver</button>
-    </form>
-
+    <h1 style="margin-top: 5%">Pagos</h1>
 </div>
 
-<form class="row" style="margin-top:50px;margin-left:300px">
-    <div>
-        <button type="submit" class="btn btn-outline-dark" style="margin-left: 150px;">Añadir</button>
-        <button type="submit" class="btn btn-outline-dark" style="margin-left: 100px;">Guardar</button>
-    </div>
-</form>
+<ul class="navbar navbar-expand-sm bg-dark navbar-dard sticky-top">
 
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" href="https://localhost:5001/Estudiante/Perfil?">Actualizar</a>
+    </li>
 
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" href="PagosMatriculas">Pagos</a>
+    </li>
+
+</ul>
+<hr style="border-color:black" />
+    
 
 <div class="row" style="margin-top: 50px">
 
@@ -53,7 +48,7 @@
                     <input type="text" style="width:100px" />
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                    <button type="submit" class="btn btn-danger"></button>
                 </td>
             </tr>
             <tr>
@@ -68,7 +63,7 @@
                     <input type="text" style="width:100px" />
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                    <button type="submit" class="btn btn-danger"></button>
                 </td>
             </tr>
             <tr>
@@ -83,9 +78,22 @@
                     <input type="text" style="width:100px" />
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-outline-dark"><img src="~/img/ojo.png" width="25" height="25" /></button>
+                    <button type="submit" class="btn btn-danger"></button>
                 </td>
             </tr>
-</table>
-</div>
+    </table>
+    <form class="row" style="margin-top:50px;margin-left:300px">
+        <div>
+            <button type="submit" class="btn btn-primary" style="margin-left: 150px;">Añadir</button>
+            <button type="submit" class="btn btn-primary" style="margin-left: 100px;">Guardar</button>
+        </div>
+    </form>
 
+
+    <form>
+        <button type="submit" class="btn btn-success" asp-area="" asp-controller="Estudiante" asp-action="Perfil" style="margin-left: 320px; margin-top: 35px; margin-bottom: 30px;">Volver</button>
+        <button type="submit" class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Login" style="margin-left: 300px; margin-top: 35px; margin-bottom: 30px;">Cerrar sesión</button>
+
+    </form>
+
+</div>
