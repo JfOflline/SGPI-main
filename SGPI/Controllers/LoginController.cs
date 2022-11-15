@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SGPI.Models;
 using System;
@@ -18,7 +18,7 @@ namespace SGPI.Controllers
             context = contexto;
         }
 
-      
+
         public ActionResult Login()
         {
             bool mensaje = false;
@@ -26,7 +26,7 @@ namespace SGPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string documento,string contracena)
+        public ActionResult Login(string documento, string contracena)
         {
             var usuario = context.Usuarios.Where(u => u.Documento == documento && u.Contraseña == contracena).ToList();
             try
@@ -41,33 +41,33 @@ namespace SGPI.Controllers
                 }
                 else if (usuario[0].IdRol == 3)
                 {
-                    return Redirect("/Estudiante/MenuEstudiante");
+                    return Redirect("/Estudiante/Perfil?");
                 }
                 else
                 {
                     return View();
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return View();
             }
-            
+
         }
 
-        
+
         public ActionResult OlvidoContracena()
         {
             return View();
         }
 
-        
+
         public ActionResult Create()
         {
             return View();
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -82,13 +82,13 @@ namespace SGPI.Controllers
             }
         }
 
-        
+
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -103,13 +103,13 @@ namespace SGPI.Controllers
             }
         }
 
-        
+
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
