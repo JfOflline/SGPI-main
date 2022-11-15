@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SGPI.Models;
 using System;
@@ -17,25 +17,83 @@ namespace SGPI.Controllers
             context = contexto;
         }
 
-        // GET: EstudianteController
+      
         public ActionResult MenuEstudiante(int id)
         {
             return View();
         }
 
-        // GET: EstudianteController/Details/5
+       
         public ActionResult Perfil()
         {
-            return View();
+            var listaUsuarios = context.Usuarios.ToList();
+            var listaprogram = context.Programas.ToList();
+            List<string> listaprogramas = new List<string>();
+            foreach (var user in listaUsuarios)
+            {
+                if (user.IdPrograma != null)
+                {
+                    foreach (var programa in listaprogram)
+                    {
+                        if (user.IdPrograma == programa.IdPrograma)
+                        {
+                            listaprogramas.Add(programa.ValPrograma);
+                        }
+                    }
+                }
+                else
+                {
+                    listaprogramas.Add("no programa");
+                }
+
+            }
+            ViewBag.programa = listaprogramas;
+            return View(listaUsuarios);
+
         }
 
-        // GET: EstudianteController/Create
+        [HttpPost]
+        public IActionResult Perfil(string documento)
+        {
+            var listaUsuarios = context.Usuarios.Where(u => u.Documento.Contains(documento)).ToList();
+            var listaprogram = context.Programas.ToList();
+            List<string> listaprogramas = new List<string>();
+            foreach (var user in listaUsuarios)
+            {
+                if (user.IdPrograma != null)
+                {
+                    foreach (var programa in listaprogram)
+                    {
+                        if (user.IdPrograma == programa.IdPrograma)
+                        {
+                            listaprogramas.Add(programa.ValPrograma);
+                        }
+                    }
+                }
+                else
+                {
+                    listaprogramas.Add("no programa");
+                }
+
+            }
+            ViewBag.programa = listaprogramas;
+            if (listaUsuarios != null)
+            {
+                return View(listaUsuarios);
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+       
         public ActionResult PagosMatriculas()
         {
             return View();
         }
 
-        // POST: EstudianteController/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -50,13 +108,13 @@ namespace SGPI.Controllers
             }
         }
 
-        // GET: EstudianteController/Edit/5
+       
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: EstudianteController/Edit/5
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -71,13 +129,13 @@ namespace SGPI.Controllers
             }
         }
 
-        // GET: EstudianteController/Delete/5
+       
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: EstudianteController/Delete/5
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
