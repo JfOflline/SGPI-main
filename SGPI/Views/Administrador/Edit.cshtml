@@ -1,4 +1,4 @@
-﻿@model SGPI.Models.Usuario;
+@model SGPI.Models.Usuario;
 @{
     ViewData["Title"] = "Edit";
 }
@@ -28,42 +28,41 @@
             <div class="row" style="margin-top:100px">
                 <div class="form-group" style="margin-left:120px">
                     <label asp-for="Documento" class="control-label" style=""><b>N.Documento</b></label>
-                    <input asp-for="Documento" type="number" class="form-control" style="border-color:black; border-width:2px; width:200px" id="ndocumento" placeholder="Ej. 11145687">
+                    <input asp-for="Documento" type="number" class="form-control" style="border-color:black; border-width:2px; width:200px" id="ndocumento">
                 </div>
                 <div class="form-group" style="margin-left:115px">
                     <label asp-for="Nombre" class="control-label" style=""><b>nombre</b></label>
-                    <input asp-for="Nombre" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="nombre" placeholder="Ej. Juan">
+                    <input asp-for="Nombre" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="nombre" >
                 </div>
                 <div class="form-group" style="margin-left:115px">
                     <label asp-for="Apellido" class="control-label" style=""><b>Apellido</b></label>
-                    <input asp-for="Apellido" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="apellido" placeholder="Ej. Perez">
+                    <input asp-for="Apellido" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="apellido" >
                 </div>
             </div>
             <div class="row" style="margin-top:100px">
                 <div class="form-group" style="margin-left:120px">
                     <label asp-for="Email" class="control-label" style=""><b>Correo</b></label>
-                    <input asp-for="Email" type="email" class="form-control" style="border-color:black; border-width:2px; width:200px" id="email" placeholder="Ej. zapata@juan.com">
+                    <input asp-for="Email" type="email" class="form-control" style="border-color:black; border-width:2px; width:200px" id="email" >
                 </div>
                 <div class="form-group" style="margin-left:115px">
                     <label asp-for="Direccion" class="control-label" style=""><b>Direccion</b></label>
-                    <input asp-for="Direccion" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="direccion" placeholder="Ej. Cr12#23c45">
+                    <input asp-for="Direccion" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="direccion">
                 </div>
                 <div class="form-group" style="margin-left:115px">
                     <label asp-for="Telefono" class="control-label" style=""><b>Telefono</b></label>
-                    <input asp-for="Telefono" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="telefono" placeholder="Ej. 857687">
+                    <input asp-for="Telefono" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="telefono" >
                 </div>
                 <div class="form-group" style="margin-left:115px">
                     <label asp-for="Contraseña" class="control-label" style=""><b>Contraceña</b></label>
-                    <input asp-for="Contraseña" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="telefono" placeholder="Ej. 857687">
+                    <input asp-for="Contraseña" type="text" class="form-control" style="border-color:black; border-width:2px; width:200px" id="telefono" >
                 </div>
             </div>
             <div style="margin-left:330px">
-                <button type="submit" class="btn btn-primary" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Enviar</button>
-                <button type="submit" class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Login" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Cerrar sesión</button>
+                <button type="submit" class="btn btn-primary" asp-area="" asp-controller="Estudiante" asp-action="Perfil" style="margin-left: 80px; margin-top: 35px; margin-bottom: 30px;">Enviar</button>
+                <button type="submit" class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Login" style="margin-left: 60px; margin-top: 35px; margin-bottom: 30px;">Cerrar sesión</button>
             </div>
         </form>
 
     </div>
 </div>
-
 
